@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Echo</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<!-- include light box stylesheet -->
+		<link href="lightbox.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src ="script.js"></script>
+	</head>
+	<body>
+		<div class="flex-container">
+			<nav id="filter-container" class="side">
+				<div class="filter thumbnail">
+					<h3>Manufacturer</h3>
+					<div class="checkbox">
+						<label><input type="checkbox" name="manufacturer" value="Apple">Apple</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" name="manufacturer" value="Samsung">Samsung</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" name="manufacturer" value="Infocus">Infocus</label>
+					</div>
+					<h3>Storage</h3>
+					<div class="checkbox">
+						<label><input type="checkbox" name = "storage" value="16">16 GB</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" name = "storage" value="32">32 GB</label>
+					</div>
+					<H3>OS</H3>
+					<div class="checkbox">
+						<label><input type="checkbox" name = "os" value="Android">Android</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" name = "os" value="IOS">IOS</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" name = "os" value="Windows">Windows</label>
+					</div>
+					<div class="checkbox">
+						<button class="btn btn-success" id ="clear-filter">Clear Filter</button>
+					</div>					
+					<!-- end of filter container -->
+				</div>
+			</nav>
+			<main id="main-doc" class="main">
+				<div class="fluid-container">
+					<div id="mobiles-row" class="row">
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="lightbox.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+.img-responsive2 {
+  height: 100%;
+  width: auto;
+  display: inline-block;
+  margin: 0 auto;
+}
+.img-container {
+  /*width:150px;*/
+  background-color: #f1f1f1;
+  width: auto;
+  height: 150px;
+  text-align: center;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+/* Sidebar/left column */
+.side {
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+
+}
+/* Main column */
+.main {
+  flex: 80%;
+  background-color: white;
+  padding: 20px;
+}
+  .filter {
+    display: inline-block;
+    text-align: left;
+    padding: 1em;
+  }
+.mobile-info {
+  padding: 20px;
+}
+.price {
+  vertical-align: bottom;
+}
+@media only screen and (min-width: 768px) {
+  #filter-container{
+      text-align: center;
+  }
+} 
