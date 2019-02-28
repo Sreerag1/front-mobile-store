@@ -10,12 +10,15 @@ $(document).ready(function(){
                   '<div class="thumbnail mobile-card" '+
                   'data-manufacturer="'+val.manufacturer+'"'+
                   'data-storage="'+val.storage+'"'+
-                  'data-os="'+val.os+'">'+
-                    '<a href="'+val.url+'" data-lightbox="'+val.url+'" data-title="'+val.name+'">'+
+                  'data-os="'+val.os+'"'+
+                  'data-name="'+val.name+'"'+
+                  'data-url="'+val.url+'"'+
+                  'data-description="'+val.description+'">'+
+
                       '<div class="img-container">'+
                         '<img class="img-responsive2" src="'+val.url+'" alt="Lights" style="">'+
                       '</div>'+
-                    '</a>'+
+
                     '<div class="mobile-info">'+
                       '<h2>'+val.name+'</h2>'+
                       '<p><strong>Manufacturer:</strong>'+val.manufacturer+'</p>'+
@@ -33,8 +36,10 @@ $(document).ready(function(){
         // end of getJSON
       });
   }
+  //After loading the entire the mobiles
   $(document).on( "finished_loading", function() {
     equalizeHeight();
+    setModalEventHandlers();
   });
 
   $("#clear-filter").on( "click",clearFilters);
@@ -61,6 +66,7 @@ $(document).ready(function(){
       }
 
   });
+  // equal the card height
   function equalizeHeight() {
       var maxHeight = 0;
       $(".mobile-card").each(function(){
@@ -68,5 +74,17 @@ $(document).ready(function(){
       });
       $(".mobile-card").height(maxHeight);          
   }
+  function setModalEventHandlers() {
+    $(".mobile-card").on("click", function(){
+      $mobile = $(this);
+      console.log($mobile.data("name"));
+      $("#mobile-title").html($mobile.data("name"));
+      $("#mobile-image").attr("src",$mobile.data("url"));
+      $("#mobile-description").html($mobile.data("description"));
+      modal.style.display = "block";
+      console.log(this.src);
+    });
+  }
+
   // end of document ready
 });

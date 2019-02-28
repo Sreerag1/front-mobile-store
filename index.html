@@ -8,7 +8,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		<!-- include light box stylesheet -->
-		<link href="lightbox.min.css" rel="stylesheet">
+		<link href="customModalBox.css" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">
 		<script type="text/javascript" src ="script.js"></script>
 	</head>
@@ -45,7 +45,7 @@
 					</div>
 					<div class="checkbox">
 						<button class="btn btn-success" id ="clear-filter">Clear Filter</button>
-					</div>					
+					</div>
 					<!-- end of filter container -->
 				</div>
 			</nav>
@@ -55,7 +55,24 @@
 					</div>
 				</div>
 			</main>
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+			  <!-- Modal content -->
+			  <div class="modal-content">
+			    <div class="modal-header">
+			      <span class="close">&times;</span>
+			      <h2 id="mobile-title">Modal Header</h2>
+			    </div>
+			    <div class="modal-body" >
+			    	<img id = "mobile-image" src="">
+			    </div>
+			    <div class="modal-footer">
+			      <p id="mobile-description"></p>
+			    </div>
+			  </div>
+			</div>
+			<!-- end of flex container -->
 		</div>
-		<script src="lightbox.min.js"></script>
+		<script src="customModalBox.js"></script>
 	</body>
 </html>
